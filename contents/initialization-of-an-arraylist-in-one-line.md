@@ -51,6 +51,15 @@ List<String> places = Collections.singletonList("Buenos Aires");
 ArrayList<String> places = new ArrayList<>(Arrays.asList("Buenos Aires", "Córdoba", "La Plata"));
 
 ```
+写一个 工厂方法也可以啊
+public static <T> ArrayList<T> createArrayList(T ... elements) { 
+  ArrayList<T> list = new ArrayList<T>();  
+  for (T element : elements) { 
+    list.add(element); 
+  } 
+  return list; 
+} 
+````
 
 stackoverflow链接：
 http://stackoverflow.com/questions/1005073/initialization-of-an-arraylist-in-one-line
